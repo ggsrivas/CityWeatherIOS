@@ -20,6 +20,31 @@
         return @"icon_default";
 }
 
++ (NSString *) weatherWindSpeedIconNameForWindDegrees: (NSNumber *) windDegrees {
+    NSArray *iconNames = @[@"dir_N",@"dir_NNE",@"dir_NE",@"dir_ENE",
+                           @"dir_E",@"dir_ESE",@"dir_SE",@"dir_SSE",
+                           @"dir_S",@"dir_SSW",@"dir_SW",@"dir_WSW",
+                           @"dir_W",@"dir_WNW",@"dir_NW",@"dir_NNW"];
+    int index = ((int)floor(([windDegrees doubleValue] + 11.25)/22.5))%16;
+    if (kATDebugDetailON) NSLog(@"%0.4f,index=%d,icon=%@", [windDegrees doubleValue],index,iconNames[index]);
+    if (index < iconNames.count)
+        return iconNames[index];
+    else return @"dir_N"; // Should never fall to here
+}
+
++ (NSString *) weatherWindDirectionForWindDegrees: (NSNumber *) windDegrees {
+    NSArray *iconNames = @[@"N",@"NNE",@"NE",@"ENE",
+                           @"E",@"dir_ESE",@"SE",@"SSE",
+                           @"",@"SSW",@"SW",@"WSW",
+                           @"",@"WNW",@"NW",@"NNW"];
+    int index = ((int)floor(([windDegrees doubleValue] + 11.25)/22.5))%16;
+    if (kATDebugDetailON) NSLog(@"%0.4f,index=%d,icon=%@", [windDegrees doubleValue],index,iconNames[index]);
+    if (index < iconNames.count)
+        return iconNames[index];
+    else return @"N"; // Should never fall to here
+}
+
+
 + (Weather *) weatherWithCityCountry: (NSString *) cityCountry
                     inAppDelegate: (AppDelegate *) appDelegate {
     Weather *weather = nil;

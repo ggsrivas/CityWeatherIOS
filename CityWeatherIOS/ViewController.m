@@ -146,7 +146,7 @@
             vc.windSpeedMphUIL.text = @"";
         }
         if (weatherData.windDeg) {
-            vc.windDirectionDegUIL.text = [NSString stringWithFormat:@"Wind direction: %.0f°",[weatherData.windDeg doubleValue]];
+            vc.windDirectionDegUIL.text = [NSString stringWithFormat:@"Wind direction: %.0f° %@",[weatherData.windDeg doubleValue], [Weather weatherWindDirectionForWindDegrees:weatherData.windDeg]];
         } else {
             vc.windDirectionDegUIL.text = @"";
         }

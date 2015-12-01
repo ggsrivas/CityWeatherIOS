@@ -20,4 +20,8 @@
 
 + (NSString *) weatherIconImageName: (NSString *) iconName;
 
++ (NSString *) weatherWindSpeedIconNameForWindDegrees: (NSNumber *) windDegree;
+
++ (NSString *) weatherWindDirectionForWindDegrees: (NSNumber *) windDegrees;
+
 @end
