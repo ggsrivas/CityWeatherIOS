@@ -1,4 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15B42" minimumToolsVersion="Automatic">
+    <entity name="Weather" representedClassName="Weather" syncable="YES">
+        <attribute name="base" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cityAndCountryUser" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cityName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cloudsAll" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="cod" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="coordLat" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="coordLon" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="dateTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="mainGroundLevel" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="mainHumidity" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="mainPressure" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="mainSeaLevel" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="mainTemp" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="mainTempMax" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="mainTempMin" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="rainThreeHour" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="serverFetchDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="snowThreeHour" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="sysCountry" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sysId" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="sysMessage" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="sysSunrise" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="sysSunset" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="sysType" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="weather0Description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weather0Icon" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weather0Id" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="weather0Main" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weather1Description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weather1Icon" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weather1Id" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="weather1Main" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="windDeg" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="windSpeed" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Weather" positionX="-45" positionY="0" width="128" height="570"/>
+    </elements>
 </model>

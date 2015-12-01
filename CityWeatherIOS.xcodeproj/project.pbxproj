@@ -14,6 +14,11 @@
 		7409FB801C0D38900029B9A5 /* CityWeatherIOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7409FB7E1C0D38900029B9A5 /* CityWeatherIOS.xcdatamodeld */; };
 		7409FB821C0D38900029B9A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7409FB811C0D38900029B9A5 /* Assets.xcassets */; };
 		7409FB851C0D38900029B9A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7409FB831C0D38900029B9A5 /* LaunchScreen.storyboard */; };
+		7409FB931C0D3A0D0029B9A5 /* Weather+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7409FB901C0D3A0D0029B9A5 /* Weather+CoreDataProperties.m */; };
+		7409FB941C0D3A0D0029B9A5 /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 7409FB921C0D3A0D0029B9A5 /* Weather.m */; };
+		7409FB981C0D3A690029B9A5 /* Weather+OpenWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = 7409FB971C0D3A690029B9A5 /* Weather+OpenWeather.m */; };
+		7409FBA01C0D3B4C0029B9A5 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7409FB9D1C0D3B4C0029B9A5 /* Constants.m */; };
+		7409FBA11C0D3B4C0029B9A5 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 7409FB9F1C0D3B4C0029B9A5 /* Utilities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,16 @@
 		7409FB811C0D38900029B9A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7409FB841C0D38900029B9A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7409FB861C0D38900029B9A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7409FB8F1C0D3A0D0029B9A5 /* Weather+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Weather+CoreDataProperties.h"; path = "CityWeatherIOS/Weather/Weather+CoreDataProperties.h"; sourceTree = "<group>"; };
+		7409FB901C0D3A0D0029B9A5 /* Weather+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Weather+CoreDataProperties.m"; path = "CityWeatherIOS/Weather/Weather+CoreDataProperties.m"; sourceTree = "<group>"; };
+		7409FB911C0D3A0D0029B9A5 /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Weather.h; path = CityWeatherIOS/Weather/Weather.h; sourceTree = "<group>"; };
+		7409FB921C0D3A0D0029B9A5 /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Weather.m; path = CityWeatherIOS/Weather/Weather.m; sourceTree = "<group>"; };
+		7409FB961C0D3A690029B9A5 /* Weather+OpenWeather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Weather+OpenWeather.h"; path = "CityWeatherIOS/Weather/Weather+OpenWeather.h"; sourceTree = "<group>"; };
+		7409FB971C0D3A690029B9A5 /* Weather+OpenWeather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Weather+OpenWeather.m"; path = "CityWeatherIOS/Weather/Weather+OpenWeather.m"; sourceTree = "<group>"; };
+		7409FB9C1C0D3B4C0029B9A5 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		7409FB9D1C0D3B4C0029B9A5 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		7409FB9E1C0D3B4C0029B9A5 /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		7409FB9F1C0D3B4C0029B9A5 /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +75,15 @@
 		7409FB711C0D38900029B9A5 /* CityWeatherIOS */ = {
 			isa = PBXGroup;
 			children = (
+				7409FB951C0D3A4D0029B9A5 /* Weather */,
 				7409FB751C0D38900029B9A5 /* AppDelegate.h */,
 				7409FB761C0D38900029B9A5 /* AppDelegate.m */,
 				7409FB781C0D38900029B9A5 /* ViewController.h */,
 				7409FB791C0D38900029B9A5 /* ViewController.m */,
+				7409FB9C1C0D3B4C0029B9A5 /* Constants.h */,
+				7409FB9D1C0D3B4C0029B9A5 /* Constants.m */,
+				7409FB9E1C0D3B4C0029B9A5 /* Utilities.h */,
+				7409FB9F1C0D3B4C0029B9A5 /* Utilities.m */,
 				7409FB7B1C0D38900029B9A5 /* Main.storyboard */,
 				7409FB811C0D38900029B9A5 /* Assets.xcassets */,
 				7409FB831C0D38900029B9A5 /* LaunchScreen.storyboard */,
@@ -80,6 +100,20 @@
 				7409FB731C0D38900029B9A5 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7409FB951C0D3A4D0029B9A5 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				7409FB961C0D3A690029B9A5 /* Weather+OpenWeather.h */,
+				7409FB971C0D3A690029B9A5 /* Weather+OpenWeather.m */,
+				7409FB8F1C0D3A0D0029B9A5 /* Weather+CoreDataProperties.h */,
+				7409FB901C0D3A0D0029B9A5 /* Weather+CoreDataProperties.m */,
+				7409FB911C0D3A0D0029B9A5 /* Weather.h */,
+				7409FB921C0D3A0D0029B9A5 /* Weather.m */,
+			);
+			name = Weather;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,7 +188,12 @@
 			files = (
 				7409FB7A1C0D38900029B9A5 /* ViewController.m in Sources */,
 				7409FB771C0D38900029B9A5 /* AppDelegate.m in Sources */,
+				7409FB941C0D3A0D0029B9A5 /* Weather.m in Sources */,
+				7409FBA11C0D3B4C0029B9A5 /* Utilities.m in Sources */,
+				7409FBA01C0D3B4C0029B9A5 /* Constants.m in Sources */,
+				7409FB931C0D3A0D0029B9A5 /* Weather+CoreDataProperties.m in Sources */,
 				7409FB741C0D38900029B9A5 /* main.m in Sources */,
+				7409FB981C0D3A690029B9A5 /* Weather+OpenWeather.m in Sources */,
 				7409FB801C0D38900029B9A5 /* CityWeatherIOS.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +343,7 @@
 				7409FB8B1C0D38900029B9A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
