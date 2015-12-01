@@ -33,14 +33,14 @@
 }
 
 + (NSString *) weatherWindDirectionForWindDegrees: (NSNumber *) windDegrees {
-    NSArray *iconNames = @[@"N",@"NNE",@"NE",@"ENE",
+    NSArray *direction = @[@"N",@"NNE",@"NE",@"ENE",
                            @"E",@"dir_ESE",@"SE",@"SSE",
                            @"",@"SSW",@"SW",@"WSW",
                            @"",@"WNW",@"NW",@"NNW"];
     int index = ((int)floor(([windDegrees doubleValue] + 11.25)/22.5))%16;
-    if (kATDebugDetailON) NSLog(@"%0.4f,index=%d,icon=%@", [windDegrees doubleValue],index,iconNames[index]);
-    if (index < iconNames.count)
-        return iconNames[index];
+    if (kATDebugDetailON) NSLog(@"%0.4f,index=%d,icon=%@", [windDegrees doubleValue],index,direction[index]);
+    if (index < direction.count)
+        return direction[index];
     else return @"N"; // Should never fall to here
 }
 
