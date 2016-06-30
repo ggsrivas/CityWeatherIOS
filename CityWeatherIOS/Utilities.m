@@ -21,7 +21,7 @@
                                    successHandler: (void(^) (NSDictionary * data)) successHandler
                                      errorHandler: (void(^) (NSString * errorMessage)) errorHandler {
     
-    if (kATDebugDelayON) [NSThread sleepForTimeInterval:2.0f]; // Artificial delay for testing
+    // if (kATDebugDelayON) [NSThread sleepForTimeInterval:2.0f]; // Artificial delay for testing
     
     // Prepare the URL.
     // http://api.openweathermap.org/data/2.5/weather?q=Albany%2C+US&APPID=YOUR_APP_ID
