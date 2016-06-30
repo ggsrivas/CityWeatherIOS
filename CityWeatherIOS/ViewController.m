@@ -14,7 +14,7 @@
 #include "Utilities.h"
 #import "Social/Social.h"
 
-@interface ViewController ()
+@interface ViewController()
 @property (weak, nonatomic) IBOutlet UITextField *cityCountryTV;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *progressBar;
 @property (weak, nonatomic) IBOutlet UIButton *getWeatherButton;
@@ -61,7 +61,7 @@
     [self.progressBar stopAnimating];
     self.progressBar.color = [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:0.5];
     [self initUI]; // At start
-    
+    self.cityCountryTV.delegate = self; // Capture enter
     self.appDelegate = [[UIApplication sharedApplication] delegate];
 }
 
@@ -262,18 +262,15 @@
     if(kATDebugDetailON) NSLog(@"latLonMapsHandler: URL=%@",appUrlString);
 }
 
-// Handler when Get Weather Button is pressed
-- (IBAction)getWeatherHandler:(id)sender {
-    self.getWeatherButton.enabled = NO;
+- (void) getWeatherForCityCountry: (NSString *) cityCountry {
     
-    // Get the City and state text
-    NSString *cityCountry = self.cityCountryTV.text;
     if ([cityCountry compare:@""] == NSOrderedSame) {
         [self showAlertPopupWithMessage:@"Enter a City, Country"
                        inViewController:self];
         self.getWeatherButton.enabled = YES;
         return;
     }
+    
     // Start progress bar
     [self.progressBar startAnimating];
     [Utilities hideKeyoardOnViewController:(ViewController *)self.cityCountryTV];
@@ -301,10 +298,35 @@
         [self refreshUIWithWeatherData:cityWeather inViewController:self];
         [self enableButtonsWithViewController:self];
     }
+}
+// Handler when Get Weather Button is pressed
+- (IBAction)getWeatherHandler:(id)sender {
+    self.getWeatherButton.enabled = NO;
     
-    
+    // Get the City and state text
+    NSString *cityCountry = self.cityCountryTV.text;
+
+    [self getWeatherForCityCountry:cityCountry];
 }
 
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    textField.backgroundColor = [UIColor colorWithRed:220.0f/255.0f green:220.0f/255.0f blue:220.0f/255.0f alpha:1.0f];
+    return YES;
+}
+
+
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField{
+    textField.backgroundColor = [UIColor whiteColor];
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    textField.backgroundColor = [UIColor whiteColor];
+    [textField resignFirstResponder];
+    [self getWeatherForCityCountry:textField.text];
+    return YES;
+}
 
 
 @end
